@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #3dc6b6;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body h1{
+    color: #fff;
+    text-align: center;
+}
+body a {
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.img-cont img {
+    width: 100%;
+}
+
+a {
+    color: #00B7FF;
+}

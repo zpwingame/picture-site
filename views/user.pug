@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+
+  h1= title
+  ul
+    each val in result
+        div(class='img-cont')
+            img(src = val, alt="")

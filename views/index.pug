@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  ul
+    each val in result
+        li 
+            img(src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=',data-src = val,class="lazyload", alt="图片未加载" onload='imgOnload(this)' height='768')

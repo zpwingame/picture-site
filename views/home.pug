@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  ul
+    each val in result
+        div
+            a(href=val) #{val}
+        //- div(class='img-cont')
+            a(href=val) #{val}
+            //- img(src = val, alt="")
