@@ -18,6 +18,25 @@ $(function(){
                 }
             }
         })
+
+         //添加移动端手势
+        var pinchImg = document.getElementsByTagName("img");
+        var initScale = 1;
+        Array.prototype.forEach.call(pinchImg,function(itemImg){
+            Transform(itemImg);
+            
+            new AlloyFinger(itemImg, {
+                rotate:function(evt){
+                    itemImg.rotateZ += evt.angle;
+                },
+                multipointStart: function () {
+                    initScale = itemImg.scaleX;
+                },
+                pinch: function (evt) {
+                    itemImg.scaleX = itemImg.scaleY = initScale * evt.zoom;
+                }
+            });
+        })
     }
     let images = document.querySelectorAll("img");
     lazyload(images);
@@ -34,6 +53,8 @@ $(function(){
             console.log('loaded')
         }
     })
+   
+   
 })
 
 function imgOnload(obj) {
