@@ -26,6 +26,11 @@ $(function(){
             Transform(itemImg);
             
             new AlloyFinger(itemImg, {
+                pressMove:function(evt){
+                    itemImg.translateX += evt.deltaX;
+                    itemImg.translateY += evt.deltaY;
+                    evt.preventDefault();
+                },
                 rotate:function(evt){
                     itemImg.rotateZ += evt.angle;
                 },
